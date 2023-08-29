@@ -1,0 +1,11 @@
+@use "_mixin";
+
+.video-section{
+  iframe {
+    width: 100%;
+    height: 450px;
+    @include mixin.xl{
+      height: 350px;
+    }
+  }
+}

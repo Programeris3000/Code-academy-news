@@ -1,0 +1,57 @@
+@use "_mixin";
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  .section-title {
+    margin: 0;
+  }
+  .main-news-list {
+    display: flex;
+    gap: 30px;
+    @include mixin.xl{
+        flex-wrap: wrap;
+    }
+    @include mixin.m{
+      flex-wrap: nowrap;
+    }
+    @include mixin.s{
+      flex-wrap: wrap;
+    }
+    .news-item {
+      width: 50%;
+      background-color: white;
+      @include mixin.xl{
+        width: 100%;
+      }
+      @include mixin.m{
+        width: 50%;
+      }
+      @include mixin.s{
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      .news-item-content {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+      }
+    }
+    .news-item-content {
+      padding: 38px;
+      .news-item-category {
+        color: #1200ff;
+        text-transform: uppercase;
+        font-weight: 700;
+        .news-item-title {
+          margin: 0;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
